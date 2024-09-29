@@ -111,6 +111,7 @@ public class Frame2 extends JFrame {
 
 		addWindowListener(new WindowAdapter() {
 			public void windowClosing(WindowEvent we) {
+				// JOptionPane.showMessageDialog(null, "Details Submitted Successfully!");
 				dispose();
 			}
 		});
