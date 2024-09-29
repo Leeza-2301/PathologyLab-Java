@@ -107,7 +107,7 @@ public class ProjectListener implements ActionListener
 			Frame3 myf3 = new Frame3();
 			//this.f1.dispose();
 		}
-		
+		String gender = (String) f2.txt_Gender.getSelectedItem();
 		if(e.getActionCommand().equals("NEXT"))
 		{
 			
@@ -125,7 +125,7 @@ public class ProjectListener implements ActionListener
 			System.out.println(m3.matches());
 			
 			Pattern p4 = Pattern.compile("^[A-Za-z]+");
-			Matcher m4 = p4.matcher(this.f2.txt_Gender.getText());
+			Matcher m4 = p4.matcher(gender);
 			System.out.println(m3.matches());
 			
 			Pattern p5 = Pattern.compile("^[0-9]{2}+[/]+[0-9]{2}+[/]+[0-9]{4}");
@@ -148,12 +148,12 @@ public class ProjectListener implements ActionListener
 			{
 				JOptionPane.showMessageDialog(null, " PLEASE ENTER NUMBER", " EMPTY FIELD ", JOptionPane.ERROR_MESSAGE);
 			}
-			else if(this.f2.txt_Gender.getText().equals(""))
+			else if(gender.equals(""))
 			{
 				JOptionPane.showMessageDialog(null, " PLEASE ENTER GENDER", " EMPTY FIELD ", JOptionPane.ERROR_MESSAGE);
 			}
 			
-			else if(this.f2.txt_Name.getText().equals("") || this.f2.txt_Date.getText().equals("") || this.f2.txt_Age.getText().equals("") || this.f2.txt_No.getText().equals("") || this.f2.txt_Gender.getText().equals(""))
+			else if(this.f2.txt_Name.getText().equals("") || this.f2.txt_Date.getText().equals("") || this.f2.txt_Age.getText().equals("") || this.f2.txt_No.getText().equals("") || gender.equals(""))
 			{
 				JOptionPane.showMessageDialog(null, " PLEASE ENTER MISSING DETAILS", " EMPTY FIELD ", JOptionPane.ERROR_MESSAGE);
 			}
@@ -189,7 +189,7 @@ public class ProjectListener implements ActionListener
 				{
 					System.out.println("i am from try block");
 					BufferedWriter bw = new BufferedWriter(new FileWriter("report.txt",true));
-					bw.write(this.f2.txt_Name.getText()+","+this.f2.txt_Date.getText()+","+this.f2.txt_Age.getText()+","+this.f2.txt_No.getText()+","+this.f2.txt_Gender.getText());
+					bw.write(this.f2.txt_Name.getText()+","+this.f2.txt_Date.getText()+","+this.f2.txt_Age.getText()+","+this.f2.txt_No.getText()+","+gender);
 					bw.newLine();
 					bw.close();
 				}

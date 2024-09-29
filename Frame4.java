@@ -1,8 +1,7 @@
 import java.awt.*;
 import java.awt.event.*;
-import java.io.*;
 import javax.swing.*;
-import java.lang.*; 
+
 
 public class Frame4 extends JFrame
 {

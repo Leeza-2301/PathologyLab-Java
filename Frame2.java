@@ -7,7 +7,8 @@ public class Frame2 extends JFrame {
 
 	JLabel lbl_Name, lbl_Age, lbl_No, lbl_City, lbl_Gender, lbl_Date, lbl_Blood;
 
-	JTextField txt_Name, txt_Age, txt_No, txt_City, txt_Gender, txt_Date, txt_Blood;
+	JTextField txt_Name, txt_Age, txt_No, txt_City, txt_Date, txt_Blood;
+	JComboBox<String> txt_Gender;
 
 	String[] optionsToChoose = { "", "Ahmedabad", "Amreli", "Anand", "Banas Kantha", "Bharuch", "Bhavnagar", "Bhuj",
 			"Botad", "Dahod(Dohad)", "Deesa",
@@ -15,10 +16,10 @@ public class Frame2 extends JFrame {
 			"Kheda", "Mahesana(Mehsana)",
 			"Morbi", "Nadiad", "Narmada", "Navsari", "Palanpur", "Panch Mahals(Panchmahal)", "Patan", "Porbandar",
 			"Rajkot", "Sabar Kantha",
-			"Surat", "Surendranagar", "Tapi", "Vadodara", "Valsad", "Vapi", "Veraval" };
+			"Surat", "Surendranagar", "Tapi", "Vadodara", "Valsad", "Vapi", "Veraval"};
 
-	String[] blood = { "", "A+", "A-", "B+", "B-", "O+", "O-", "AB+", "AB-" };
-	String[] gender = { "", "Male", "Female", "Other" };
+	String[] blood = { "", "A+", "A-", "B+", "B-", "O+", "O-", "AB+", "AB-"};
+	String[] gender = { "", "Male", "Female", "Other"};
 	ProjectListener fm2 = new ProjectListener(this);
 
 	Frame2() {
@@ -55,7 +56,7 @@ public class Frame2 extends JFrame {
 		JComboBox<String> txt_City = new JComboBox<>(optionsToChoose);
 		txt_Date = new JTextField();
 		JComboBox<String> txt_Blood = new JComboBox<>(blood);
-		JComboBox<String> txt_Gender = new JComboBox<>(gender);
+		txt_Gender = new JComboBox<>(gender);
 
 		lbl_Name.setFont(f2);
 		lbl_Age.setFont(f2);
